@@ -1,0 +1,20 @@
+---
+- name: variable array playbook test
+  hosts: localhost
+  gather_facts: no
+  
+  vars:
+    users:
+      user1:
+        first_name: Anamika
+        last_name: Khanna
+        age: 21
+      user2:
+        first_name: Rishab
+        last_name: Malhotra
+        age: 26
+    
+  tasks:
+    - name: print name
+      debug:
+        msg: "{{ users.user1.first_name }} {{ users.user1.last_name }}"
