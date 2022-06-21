@@ -18,8 +18,7 @@
     - name: print name
       set_fact: 
         output_user1: "{{ users.user1.first_name }} {{ users.user1.last_name }}"
-        output_user2: "{{ users.user2.first_name }} {{ users.user2.last_name }}"
       register: register_var
     - name: debug ip address of localhost
       debug:
-        msg: "{{ output_user1 }} & {{ output_user2 }}"
+        msg: "{{register_var}}"
