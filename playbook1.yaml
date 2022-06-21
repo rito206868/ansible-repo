@@ -11,4 +11,4 @@
     
     - name: print {{ var_3 }}
       debug:
-        masg: "{{ var_3 }}"
+        msg: "{{ var_3 }}"
