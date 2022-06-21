@@ -1,6 +1,7 @@
 ---
 - name: variable playbook test
   hosts: localhost
+  gather_facts: no
   
   vars:
     var_1: ansible is
